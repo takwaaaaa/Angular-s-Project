@@ -1,0 +1,95 @@
+
+.note-card-container {
+    position:relative;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    height: auto; 
+    max-width: 600px; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto; 
+    transition: box-shadow 0.3s ease;
+}
+
+.note-card-container .note-card-content {
+    padding: 10px 0;
+}
+
+.note-card-container .note-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(180, 123, 180);
+}
+
+.note-card-content.note-card-body {
+    font-size: 14px;
+    color: #555;
+    position: relative;
+    max-height: 80px;
+    overflow: hidden;
+}
+
+.note-card-container:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.fade-out-truncation.note-card-content{
+    position: absolute;
+
+    pointer-events: none;
+
+    bottom:0;
+    height: 50%;
+    width:100% ;
+
+    background: linear-gradient(to bottom,rgba(white ,0.0) 50%, white 100%);
+   
+}
+#close {
+    overflow: hidden;
+    position: absolute; 
+    top: 10px; 
+    left: 600px; 
+    border: none;
+    padding: 0;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background: transparent;
+    color: #e958c9;
+    font: inherit;
+    text-indent: 100%;
+    cursor: pointer;
+    
+}
+
+#close:focus {
+    outline: solid 0 transparent;
+    box-shadow: 0 0 0 2px #e958c9;
+}
+
+#close:hover {
+    background: rgba(29, 161, 142, .1);
+}
+
+#close:before, #close:after {
+    position: absolute;
+    top: 15%;
+    left: calc(50% - .0625em);
+    width: .125em;
+    height: 70%;
+    border-radius: .125em;
+    transform: rotate(45deg);
+    background: currentcolor;
+    content: '';
+}
+
+#close:after {
+    transform: rotate(-45deg);
+}
+
+
